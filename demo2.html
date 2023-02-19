@@ -8,11 +8,24 @@
 </head>
 <body>
     <h3>Contador de clicks</h3>
-    <h1>hamson gay</h1>
-    <p>0 </p>
-    <button> Click aqui</button>
-    <script> console.log("hola mundo");
-    </script>
+    <p id="Contador"> 0 </p>
+    <button id="Botonclick">Click aqui</button>
+    <script> 
 
-</body>
+    var Elementboton = document.getElementById("Botonclick");
+    var Elementcontador = document.getElementById("Contador");
+    var conteoclick=0;
+
+    Elementboton.onclick = function () {
+        conteoclick++;
+        Elementcontador.textContent = conteoclick;
+
+        if (conteoclick>=9){
+        conteoclick=0;
+    }
+    }
+    </script>
+    
+
+    </body>
 </html>
